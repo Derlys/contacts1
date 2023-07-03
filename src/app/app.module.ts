@@ -8,6 +8,7 @@ import { DetailContactComponent } from './components/detail-contact/detail-conta
 import { RouterOutlet } from '@angular/router';
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     EditContactComponent,
     AddContactComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterOutlet],
+  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

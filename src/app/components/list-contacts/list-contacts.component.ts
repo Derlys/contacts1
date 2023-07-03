@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ContactsService } from '../../services/contacts.service';
+import { Contact } from '../../contact';
 
 @Component({
   selector: 'app-list-contacts',
@@ -11,14 +12,9 @@ export class ListContactsComponent {
 
   constructor(private readonly contactsService: ContactsService) {}
 
-  ngOnInit() {}
-
-  contact: Contact;
-
-  getContacts() {
-    this.contactsService.getContacts().subscribe((contacts) => {
-      this.contacts = contacts;
-      this.getContacts();
+  ngOnInit() {
+    this.contactsService.getContacts().subscribe((data) => {
+      this.contacts = data;
     });
   }
 }
