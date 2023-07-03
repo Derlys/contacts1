@@ -13,6 +13,12 @@ export class ListContactsComponent {
   constructor(private readonly contactsService: ContactsService) {}
 
   ngOnInit() {
+    this.getContacts();
+  }
+
+  contact?: Contact;
+
+  getContacts() {
     this.contactsService.getContacts().subscribe((data) => {
       this.contacts = data;
     });
