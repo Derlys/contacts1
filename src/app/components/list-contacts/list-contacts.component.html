@@ -1,12 +1,15 @@
-<li *ngFor="let contact of contacts">
-  <ul>
-    {{
-      contact.name
-    }}
-  </ul>
-  <ul>
-    {{
-      contact.phone
-    }}
-  </ul>
-</li>
+<div>
+  <a routerLink="/add-contact">Add contact</a>
+  <li *ngFor="let contact of contacts">
+    <ul>
+      {{
+        contact.name
+      }}
+    </ul>
+    <ul>
+      {{
+        contact.phone
+      }}
+    </ul>
+  </li>
+</div>
