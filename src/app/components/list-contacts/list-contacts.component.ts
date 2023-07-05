@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ContactsService } from '../../services/contacts.service';
 import { Contact } from '../../contact';
+
+import { AddContactService } from '../../services/add-contact.service';
 
 @Component({
   selector: 'app-list-contacts',
@@ -10,17 +11,7 @@ import { Contact } from '../../contact';
 export class ListContactsComponent {
   contacts: Contact[] = [];
 
-  constructor(private readonly contactsService: ContactsService) {}
-
-  ngOnInit() {
-    this.getContacts();
-  }
-
-  contact?: Contact;
-
-  getContacts() {
-    this.contactsService.getContacts().subscribe((data) => {
-      this.contacts = data;
-    });
+  constructor(private readonly addContactService: AddContactService) {
+    this.contacts = this.addContactService.contacts;
   }
 }
