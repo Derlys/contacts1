@@ -9,6 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { EditContactComponent } from './components/edit-contact/edit-contact.component';
 import { AddContactComponent } from './components/add-contact/add-contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterOutlet,
     HttpClientModule,
     RouterLink,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
